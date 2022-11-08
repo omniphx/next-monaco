@@ -15,6 +15,9 @@ const customJestConfig = {
   modulePaths: ['<rootDir>/src'],
   testMatch: ['**/*.test.js', '**/*.test.ts', '**/*.test.tsx'],
   testEnvironment: 'jest-environment-jsdom',
+  moduleNameMapper: {
+    'monaco-editor': '<rootDir>/node_modules/@monaco-editor/react',
+  },
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

@@ -4,15 +4,14 @@ import loader from '@monaco-editor/loader';
 import { useEffect } from 'react';
 import * as monaco from 'monaco-editor';
 
-loader.config({ monaco })
+loader.config({ monaco });
 
 const Code = () => {
-
   useEffect(() => {
     loader.init().then((monaco) => {
-      console.log("Here is the monaco instance", monaco);
+      console.log('Here is the monaco instance', monaco);
     });
-  })
+  });
 
   return (
     <Editor
@@ -20,7 +19,7 @@ const Code = () => {
       defaultLanguage="javascript"
       defaultValue="// let's write some broken code 😈"
     />
-  )
+  );
 };
 
 export default Code;
